@@ -84,7 +84,8 @@ def plot_results(model: SIRModel):
                       "variable": "Group"
                   }
                   )
-    plt.update_xaxes()
+    plt.update_xaxes(showticklabels=False)
+    plt.write_image(r"plots\SIR_plot.png")
     plt.show()
 
 
