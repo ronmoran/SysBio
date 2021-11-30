@@ -289,8 +289,30 @@ status open
 )ב(
 \end_layout
 
-\begin_layout Subsection*
-)ג(
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename q1b1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename q1b2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section*

@@ -285,6 +285,16 @@ status open
 )א(
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q1a1.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 )ב(
 \end_layout
@@ -292,7 +302,7 @@ status open
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename q1b1.png
+	filename plots/q1b1.png
 	scale 60
 
 \end_inset
@@ -303,7 +313,7 @@ status open
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename q1b2.png
+	filename plots/q1b2.png
 	scale 60
 
 \end_inset
