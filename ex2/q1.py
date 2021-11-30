@@ -3,9 +3,11 @@ import plotly.express as px
 import pandas as pd
 import os
 
+import plotly
+
 DT = 1e-3
 TOTAL_TIME = 1.5
-PLOT_PATH = r"C:\Uni\drive\Studies\yearC\SysBio\ex2"
+PLOT_PATH = r"lyx_files\plots"
 
 
 def simulate_negative_autoregulation(max_rate: float, degradation_rate: float, kd: float, hill_coef: int,
@@ -29,7 +31,7 @@ def calc_nar_change(degradation_rate, hill_coef, kd_exp_coef, max_rate, current_
 def simulate_regular_regulation(max_rate: float, degradation_rate: float, total_time: float, dt: float) -> \
         (np.ndarray, np.ndarray):
     time_vals = np.linspace(0, total_time, num=int(total_time / dt))
-    return time_vals, (max_rate / degradation_rate) * (1 - np.exp(-degradation_rate * time_vals))
+    return time_vals, calc_regular_production(max_rate, degradation_rate, time_vals)
     # concentration = np.empty(time_vals.shape)
     # concentration[0] = 0
     # for i in range(1, len(time_vals)):
@@ -37,8 +39,15 @@ def simulate_regular_regulation(max_rate: float, degradation_rate: float, total_
     # return time_vals, concentration
 
 
-def calc_reg_change(max_rate, degradation_rate, current_concentration):
-    return max_rate - degradation_rate * current_concentration
+def calc_regular_production(max_rate, degradation_rate, time_vals):
+    return (max_rate / degradation_rate) * (1 - np.exp(-degradation_rate * time_vals))
+
+def calc_regular_degradation(initial_amount, degradation_rate, time_vals):
+    return initial_amount * np.exp(-degradation_rate * time_vals)
+
+
+# def calc_reg_change(max_rate, degradation_rate, current_concentration):
+#     return max_rate - degradation_rate * current_concentration
 
 
 def plot_rate_balance(degradation_rate: float, max_rate: float, kd: float, hill_coefs: np.ndarray,
@@ -63,7 +72,7 @@ def plot_rate_balance(degradation_rate: float, max_rate: float, kd: float, hill_
     plt.show()
 
 
-def plot_concentrations(data, variable, fig_name):
+def plot_concentrations(data, variable, fig_name, add_half_concentration=True, x_axis_visible=False):
     plt = px.line(data,
                   title='Concentration In Time',
                   labels={
@@ -72,8 +81,26 @@ def plot_concentrations(data, variable, fig_name):
                       "variable": variable
                   }
                   )
-    plt.add_hline(y=data.iloc[-1][0] / 2, line_dash="dot", annotation_text="steady-state / 2")
-    plt.update_xaxes(visible=False)
+    if add_half_concentration:
+        plt.add_hline(y=data.iloc[-1][0] / 2, line_dash="dot", annotation_text="steady-state / 2")
+    plt.update_xaxes(visible=x_axis_visible)
+    plt.show()
+    plt.write_image(os.path.join(PLOT_PATH, fig_name))
+
+
+def plot_concentrations_q4(data, variable, fig_name, add_half_concentration=True, x_axis_visible=False):
+    fig = plotly.subplots.make_subplots(rows=3, cols=1)
+    plt = px.line(data,
+                  title='Concentration In Time',
+                  labels={
+                      "index": "Time",
+                      "value": "Concentration",
+                      "variable": variable
+                  }
+                  )
+    if add_half_concentration:
+        plt.add_hline(y=data.iloc[-1][0] / 2, line_dash="dot", annotation_text="steady-state / 2")
+    plt.update_xaxes(visible=x_axis_visible)
     plt.show()
     plt.write_image(os.path.join(PLOT_PATH, fig_name))
 
@@ -95,10 +122,67 @@ def q1b(kd, max_rate, degradation_rate):
     plot_rate_balance(degradation_rate, max_rate, kd, hill_coefs, 1.5, 1000, "q1b2.png")
 
 
+def q4a(kyz, y_max_rate, y_deg_rate, z_max_rate, z_deg_rate, sig_start_time, sig_stop_time, total_time, dt):
+    assert sig_start_time/dt + 2 < sig_stop_time/dt < total_time/dt
+    time_vals = np.linspace(0, total_time, num=int(total_time / dt))
+    sig_start_step = int(sig_start_time/dt)
+    sig_stop_step = int(sig_stop_time/dt)
+    no_active_x_start = time_vals[0:sig_start_step]
+    active_x = time_vals[sig_start_step:sig_stop_step] - time_vals[sig_start_step]
+    no_active_x_end = time_vals[sig_stop_step:] - time_vals[sig_stop_step]
+    y_prod = calc_regular_production(y_max_rate, y_deg_rate, active_x)
+    y_deg = calc_regular_degradation(y_prod[-1], y_deg_rate, no_active_x_end)
+    y = np.array([0.] * len(no_active_x_start) + list(y_prod) + list(y_deg))
+    z_prod_time_vals = time_vals[(y > kyz) & (sig_start_step < np.arange(time_vals.size)) &
+                                              (np.arange(time_vals.size) < sig_stop_step)]
+    z_prod = calc_regular_production(z_max_rate, z_deg_rate, z_prod_time_vals - z_prod_time_vals[0])
+    z_deg = calc_regular_degradation(z_prod[-1], z_deg_rate, no_active_x_end)
+    no_z = np.zeros((time_vals[time_vals < z_prod_time_vals[0]].size,))
+    z = np.hstack((no_z, z_prod, z_deg))
+    signal = np.where((sig_start_step < np.arange(time_vals.size)) &  (np.arange(time_vals.size) < sig_stop_step),
+                      np.max(np.hstack((y, z))) * 1.2, 0.)
+    data = pd.DataFrame(np.vstack((y, z, signal)).T, columns=["Y", "Z", "signal"])
+    plot_concentrations(data, "concentration", "q4a.png", False)
+
+
+def q4b(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rate, z_deg_rate, sig_start_time, sig_stop_time, total_time, dt):
+    assert sig_start_time/dt + 2 < sig_stop_time/dt < total_time/dt
+    time_vals = np.linspace(0, total_time, num=int(total_time / dt))
+    sig_start_step = int(sig_start_time/dt)
+    sig_stop_step = int(sig_stop_time/dt)
+    no_signal_start = time_vals[0:sig_start_step]
+    x_prod_time = time_vals[sig_start_step:sig_stop_step] - time_vals[sig_start_step]
+    x_deg_time = time_vals[sig_stop_step:] - time_vals[sig_stop_step]
+    x_prod = calc_regular_production(x_max_rate, y_deg_rate, x_prod_time)
+    x_deg = calc_regular_degradation(x_prod[-1], x_deg_rate, x_deg_time)
+    x = np.array([0.] * len(no_signal_start) + list(x_prod) + list(x_deg))
+    y_prod_time_vals = time_vals[x > kxy]
+    y_prod_time = y_prod_time_vals - y_prod_time_vals[0]
+    y_prod = calc_regular_production(y_max_rate, y_deg_rate, y_prod_time)
+    y_deg_time = time_vals[(x < kxy) & (time_vals > x_prod_time[-1])]
+    y_deg = calc_regular_degradation(y_prod[-1], y_deg_rate, y_deg_time - y_deg_time[0])
+    y = np.array([0.] * np.count_nonzero(time_vals < y_prod_time_vals[0]) + list(y_prod) + list(y_deg))
+    z_prod_time_vals = time_vals[(y > kyz) & (x > kxz)]
+    z_prod = calc_regular_production(z_max_rate, z_deg_rate, z_prod_time_vals - z_prod_time_vals[0])
+    z_deg_time = time_vals[((x < kxz) | (y < kyz)) & (time_vals > x_prod_time[-1])]
+    z_deg = calc_regular_degradation(z_prod[-1], z_deg_rate, z_deg_time - z_deg_time[0])
+    no_z = np.zeros((np.count_nonzero(time_vals < z_prod_time_vals[0]),))
+    z = np.hstack((no_z, z_prod, z_deg))
+    signal = np.where((sig_start_step < np.arange(time_vals.size)) & (np.arange(time_vals.size) < sig_stop_step),
+                      np.max(np.hstack((x, y, z))) * 1.2, 0.)
+    data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
+    plot_concentrations(data, "concentration", "q4a.png", False)
+
+
 if __name__ == "__main__":
     kd = 0.8
     hill_coef = 3
     max_rate = 5
     degradation_rate = 3
-    q1a(kd, hill_coef, max_rate, degradation_rate)
-    q1b(kd, max_rate, degradation_rate)
+    kyz_4a = 0.5
+    kxy_4b = 0.4
+    kxz_4b = 0.65
+    # q1a(kd, hill_coef, max_rate, degradation_rate)
+    # q1b(kd, max_rate, degradation_rate)
+    # q4a(kyz_4a, max_rate, degradation_rate, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    q4b(kyz_4a, kxy_4b, kxz_4b, max_rate / 1.5, degradation_rate * 2, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
