@@ -1,0 +1,1296 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{xcolor}
+\definecolor{blue}{RGB}{0, 0, 140}
+\definecolor{green}{RGB}{0, 140, 0}
+\definecolor{red}{RGB}{220, 0, 0}
+
+% Necessary Commands
+\usepackage{culmus}
+\usepackage{autobreak}
+\usepackage[T1]{fontenc}
+\newfontfamily{\hebrewfont}{David}
+% Set space between words to be wider:
+\spaceskip=1.3\fontdimen2\font plus 1\fontdimen3\font minus 1.5\fontdimen4\font
+% Set the colors of hyplerlinks
+\hypersetup{
+colorlinks = true, %Colours links instead of ugly boxes
+urlcolor = blue, %Colour for external hyperlinks
+linkcolor = black, %Colour of internal links
+citecolor = red %Colour of citations
+}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth -2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "20pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing double
+\align center
+
+\series bold
+\size huge
+)
+\numeric on
+88893
+\numeric off
+( מבוא לביולוגיה מערכתית | תרגיל
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Plain Layout
+\paragraph_spacing double
+\align center
+שם: ניצן שלוי ורון מורן | ת
+\begin_inset Quotes erd
+\end_inset
+
+ז:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+208649020
+\numeric off
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+206170920
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/nitza/Documents/University/lyx/macros2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Subsection*
+)א( השוואה בין רגולציה רגילה לאוטורגולציה שלילית
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+צריך להדגיש את 
+\begin_inset Formula $t_{0.5}$
+\end_inset
+
+ בשני המקרים, לא רק את 
+\begin_inset Formula $st.s/2$
+\end_inset
+
+, וכותרת של זמן לציר 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q1a1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ה-
+\begin_inset Formula $t_{0.5}$
+\end_inset
+
+ של 
+\begin_inset Formula $NAR$
+\end_inset
+
+ וה-
+\begin_inset Formula $t_{0.5}$
+\end_inset
+
+ של רגולציה רגילה נמצאים בנקודותת החיתוך של העקומות שלהם עם הריכוז 
+\begin_inset Formula $y=\dfrac{steady\,state}{2}$
+\end_inset
+
+, וניתן לראות ש-
+\begin_inset Formula $t_{0.5}^{NAR}<t_{0.5}^{reg}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+)ב( השוואה בין אוטורגולציה שלילית עם מקדמי 
+\begin_inset Formula $n=1$
+\end_inset
+
+ ו-
+\begin_inset Formula $n=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q1b2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q1b1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q2.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+)א( בהנחה שהפרומוטור של 
+\begin_inset Formula $W$
+\end_inset
+
+ מבצע שער 
+\begin_inset Formula $AND$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+על מנת להתחיל להשתעתק צריך שריכוז 
+\begin_inset Formula $Z$
+\end_inset
+
+ ו-
+\begin_inset Formula $Y$
+\end_inset
+
+ יעברו את 
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+ ו-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+ בהתאמה.
+ 
+\end_layout
+
+\begin_layout Standard
+לכן 
+\begin_inset Formula $W$
+\end_inset
+
+ מתחיל לעלות רק כשהמאוחר מביניהם קורה ויורד כשהמוקדם מביניהם קורה.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q2a.png
+	lyxscale 70
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+)ב( בהנחה שהפרומוטור של 
+\begin_inset Formula $W$
+\end_inset
+
+ מבצע שער 
+\begin_inset Formula $OR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+על מנת להתחיל להשתעתק צריך שלפחות אחד מבין 
+\begin_inset Formula $Z$
+\end_inset
+
+ ו-
+\begin_inset Formula $Y$
+\end_inset
+
+ יעברו את ריכוז 
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+ ו-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+ בהתאמה.
+ 
+\end_layout
+
+\begin_layout Standard
+לכן 
+\begin_inset Formula $W$
+\end_inset
+
+ מתחיל לעלות כשהמוקדם מביניהם קורה ויורד כשהמאוחר מביניהם קורה.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q2b.png
+	lyxscale 70
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+)ג( 
+\end_layout
+
+\begin_layout Standard
+במערכת 
+\begin_inset Formula $AND$
+\end_inset
+
+ יש עיכוב בהופעת 
+\begin_inset Formula $W$
+\end_inset
+
+ בעיקר ב-
+\begin_inset Formula $ON\,step$
+\end_inset
+
+.
+ הוא רגיש ל-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+ )המאוחר מביניהם בהופעת הסיגנל
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+זה שהוא גדול יותר לא אומר שהוא בהכרח המאוחר מביניהם, רק אם קצב היצירה תואם
+\end_layout
+
+\end_inset
+
+( כי זה לא משנה מתי נגיע ל-
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+, כל עוד לא הגענו גם ל-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+, כלומר נוצר מספיק מ-
+\begin_inset Formula $Y$
+\end_inset
+
+ וגם מ-
+\begin_inset Formula $Z$
+\end_inset
+
+, 
+\begin_inset Formula $W$
+\end_inset
+
+ לא יתחיל להופיע.
+ ב-
+\begin_inset Formula $OFF\,step$
+\end_inset
+
+ יש עיכוב קטן לאחר הופעת הסיגנל, כי התגובה של 
+\begin_inset Formula $W$
+\end_inset
+
+ לא תתרחש מיד אלא בהגעה ל-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+ )המוקדם מביניהם בהיעלמות הסיגנל(.
+ בכל מקרה בשני המקרים התגובה של 
+\begin_inset Formula $W$
+\end_inset
+
+ רגישה ל-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+במערכת 
+\begin_inset Formula $OR$
+\end_inset
+
+ המצב הפוך.
+ יש עיכוב בהופעת 
+\begin_inset Formula $W$
+\end_inset
+
+ בעיקר ב-
+\begin_inset Formula $OFF\,step$
+\end_inset
+
+.
+ הוא רגיש ל-
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+ )המאוחר מביניהם בהיעלמות הסיגנל( כי גם אחרי שעברנו את 
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+ )
+\begin_inset Formula $Y$
+\end_inset
+
+ ירד מתחתיו( מספיק שעדיין תהיה השפעה 
+\begin_inset Formula $Z$
+\end_inset
+
+ על מנת ש-
+\begin_inset Formula $W$
+\end_inset
+
+ ימשיך להיווצר.
+ רק לאחר הגעה ל-
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+ )
+\begin_inset Formula $Z$
+\end_inset
+
+ ירד מתחתיו( מגיעים למצב שהן 
+\begin_inset Formula $Y$
+\end_inset
+
+ והן 
+\begin_inset Formula $Z$
+\end_inset
+
+ מפסיקים להשפיע על 
+\begin_inset Formula $W$
+\end_inset
+
+ והוא מפסיק להיווצר ומתחיל לרדת.
+ ב-
+\begin_inset Formula $ON\,step$
+\end_inset
+
+ לעומת זאת יש עיכוב קטן מכך ש-
+\begin_inset Formula $W$
+\end_inset
+
+ לא יתחיל להגיב מיד עם הופעת הסיגנל, אלא רק לאחר הגעה ל-
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+ )המוקדם מביניהם בהופעת הסיגנל(.
+ בכל מקרה בשני המקרים התגובה של 
+\begin_inset Formula $W$
+\end_inset
+
+ רגישה ל-
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+אם ספי ההפעלה יהיו זהים, ובהנחה שגם קצב היצירה דומה מאוד, אז ההשפעה של 
+\begin_inset Formula $Y$
+\end_inset
+
+ ו-
+\begin_inset Formula $Z$
+\end_inset
+
+ על 
+\begin_inset Formula $W$
+\end_inset
+
+ תהיה זהה )הגעה ל-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+ ו-
+\begin_inset Formula $K_{ZW}$
+\end_inset
+
+ תתרחש באותו זמן גם ב-
+\begin_inset Formula $ON$
+\end_inset
+
+ וגם ב-
+\begin_inset Formula $OFF$
+\end_inset
+
+(.
+ זה יוביל לכך שמערכות ה-
+\begin_inset Formula $AND$
+\end_inset
+
+ וה-
+\begin_inset Formula $OR$
+\end_inset
+
+ יתנהגו בצורה זהה, כי להפעיל 
+\begin_inset Formula $AND$
+\end_inset
+
+ או 
+\begin_inset Formula $OR$
+\end_inset
+
+ על שני איברים זהים זה פשוט לבדוק אם הגענו לאחד מהם )בה
+\begin_inset Quotes erd
+\end_inset
+
+ג בחרנו ב-
+\begin_inset Formula $K_{YW}$
+\end_inset
+
+(: 
+\begin_inset Formula 
+\[
+K_{YW}\,and\,K_{ZW}=K_{YW}\,and\,K_{YW}=K_{YW}=K_{YW}\,or\,K_{YW}=K_{YW}\,or\,K_{ZW}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Standard
+נביט במערכת הבאה:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q3.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+על מנת ש-
+\begin_inset Formula $Z_{1},Z_{2}$
+\end_inset
+
+ יהיו ב-
+\begin_inset Formula $FIFO$
+\end_inset
+
+ )
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ מופיע לפני 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+ וגם נעלם לפניו( צריך שיתקיים:
+\begin_inset Formula 
+\[
+K_{XZ_{1}}<K_{XZ_{2}},K_{YZ_{2}}<K_{YZ_{1}}
+\]
+
+\end_inset
+
+וגם ש-
+\begin_inset Formula $X$
+\end_inset
+
+ יגיע ל-
+\begin_inset Formula $K_{XZ_{1}}$
+\end_inset
+
+ לפני ש-
+\begin_inset Formula $Y$
+\end_inset
+
+ מגיע ל-
+\begin_inset Formula $K_{YZ_{2}}$
+\end_inset
+
+.
+ לכן נגדיר את 
+\begin_inset Formula $K_{XY}=K_{XZ_{2}}$
+\end_inset
+
+, ונקבל ש-
+\begin_inset Formula $K_{XY}<K_{XZ_{1}}$
+\end_inset
+
+ ולכן בהכרח נגיע ל-
+\begin_inset Formula $K_{XZ_{1}}$
+\end_inset
+
+ לפני 
+\begin_inset Formula $K_{XY}$
+\end_inset
+
+.
+ בנוסף רק לאחר הגעה ל-
+\begin_inset Formula $K_{XY}$
+\end_inset
+
+ הרמה של 
+\begin_inset Formula $Y$
+\end_inset
+
+ תתחיל לרדת ונגיע ל-
+\begin_inset Formula $K_{YZ_{1}}$
+\end_inset
+
+ ול-
+\begin_inset Formula $K_{YZ_{2}}$
+\end_inset
+
+, אז קיבלנו את הנדרש.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q3a.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\end_layout
+
+\begin_layout Subsection*
+)א(
+\end_layout
+
+\begin_layout Subsection*
+)ב(
+\end_layout
+
+\begin_layout Subsection*
+)ג(
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\end_layout
+
+\begin_layout Subsection*
+)א(
+\end_layout
+
+\begin_layout Standard
+נזכור שקצב ייצור 
+\begin_inset Formula $\b\left(Y\right)$
+\end_inset
+
+ בנקודת זמן מסוימת עבור אקטיבטור 
+\begin_inset Formula $X$
+\end_inset
+
+ של 
+\begin_inset Formula $Y$
+\end_inset
+
+ עם מקדם היל 
+\begin_inset Formula $n$
+\end_inset
+
+ הוא:
+\begin_inset Formula 
+\[
+\b\left(Y\right)=\b_{\max}^{Y}\cdot\dfrac{X^{n}}{K_{d}^{n}+X^{n}}
+\]
+
+\end_inset
+
+נניח 
+\begin_inset Formula $\b_{\max}^{Y}=1$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $X$
+\end_inset
+
+ בעל מקדם היל 
+\begin_inset Formula $n=`$
+\end_inset
+
+ אז קצב הייצור הוא 
+\begin_inset Formula $\b\left(Y\right)=\dfrac{X}{K_{d}+X}$
+\end_inset
+
+.
+ נניח שהוא 
+\begin_inset Formula $0.1$
+\end_inset
+
+ ונבטא את 
+\begin_inset Formula $X$
+\end_inset
+
+ באמצעות 
+\begin_inset Formula $K_{d}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\b\left(Y\right)=\dfrac{X}{K_{d}+X}=0.1\leftrightarrow0.1K_{d}+0.1X=X\leftrightarrow0.1K_{d}=0.9X\leftrightarrow K_{d}=9X
+\]
+
+\end_inset
+
+נראה מה קורה שמעלים את ריכוז 
+\begin_inset Formula $X$
+\end_inset
+
+ פי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+81
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ונציב את הערך 
+\begin_inset Formula $K_{d}=9X$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\b'\left(Y\right)=\dfrac{81\cdot X}{K_{d}+81\cdot X}\overset{*}{=}\dfrac{81\cdot X}{9X+81\cdot X}=\frac{81}{90}=0.9
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ואכן קיבלנו שהעלאה של ריכוז 
+\begin_inset Formula $X$
+\end_inset
+
+ פי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+81
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהריכוז שלו בקצב 
+\begin_inset Formula $0.1$
+\end_inset
+
+ הביא לקצב 
+\begin_inset Formula $0.9$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\dfrac{\dfrac{X}{K_{d}+X}}{\dfrac{81\cdot X}{K_{d}+81\cdot X}} & =\dfrac{X\left(K_{d}+81X\right)}{81X\left(K_{d}+X\right)}=\dfrac{K_{d}+81X}{81\left(K_{d}+X\right)}\overset{?}{=}\dfrac{1}{9}\leftrightarrow9\left(K_{d}+81X\right)=81\left(K_{d}+X\right)\leftrightarrow\\
+ & \leftrightarrow K_{d}+81X=9K_{d}+9X\leftrightarrow73X=8K_{d}\leftrightarrow9.125X=K_{d}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dfrac{K_{d}+81X}{81K_{d}+81X}=\dfrac{K_{d}}{81K_{d}+81X}+\dfrac{81X}{81K_{d}+81X}=\dfrac{K_{d}}{81K_{d}+81X}+\dfrac{X}{K_{d}+X}=\dfrac{K_{d}}{81K_{d}+81X}+\b\left(Y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+)ב(
+\end_layout
+
+\begin_layout Standard
+כעת נניח שמקדם ההיל של 
+\begin_inset Formula $X$
+\end_inset
+
+ הוא 
+\begin_inset Formula $n=4$
+\end_inset
+
+.
+ אז:
+\begin_inset Formula 
+\[
+\b\left(Y\right)=\dfrac{X^{4}}{K_{d}^{4}+X^{4}}=0.1\leftrightarrow0.1K_{d}^{4}+0.1X^{4}=X^{4}\leftrightarrow K_{d}^{4}=9X^{4}
+\]
+
+\end_inset
+
+נראה מה קורה כשמעלים את ריכוז 
+\begin_inset Formula $X$
+\end_inset
+
+ פי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ונציב את 
+\begin_inset Formula $K_{d}^{4}=9X^{4}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\b'\left(Y\right)=\dfrac{\left(3X\right)^{4}}{K_{d}^{4}+\left(3X\right)^{4}}=\dfrac{3^{4}X^{4}}{9X^{4}+3^{4}X^{4}}=\dfrac{81}{9+81}=\dfrac{81}{90}=0.9
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
