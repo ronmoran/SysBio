@@ -15,16 +15,15 @@ def simulate_negative_autoregulation(max_rate: float, degradation_rate: float, k
     steps = int(total_time / dt)
     protein_concentration = np.empty(steps, dtype=float)
     protein_concentration[0] = 0.0
-    kd_exp_coef = kd ** hill_coef
     for i in range(1, steps):
         protein_concentration[i] = protein_concentration[i - 1] + \
-                                   calc_nar_change(degradation_rate, hill_coef, kd_exp_coef, max_rate,
+                                   calc_nar_change(degradation_rate, hill_coef, kd, max_rate,
                                                    protein_concentration[i - 1]) * dt
     return np.array([np.linspace(0, steps / dt, num=steps), protein_concentration])
 
 
-def calc_nar_change(degradation_rate, hill_coef, kd_exp_coef, max_rate, current_protein_concentration):
-    return max_rate * (kd_exp_coef / (kd_exp_coef + (current_protein_concentration ** hill_coef)))\
+def calc_nar_change(degradation_rate, hill_coef, kd, max_rate, current_protein_concentration):
+    return max_rate * (kd ** hill_coef / (kd ** hill_coef + (current_protein_concentration ** hill_coef)))\
             - degradation_rate * current_protein_concentration
 
 
@@ -46,8 +45,10 @@ def calc_regular_degradation(initial_amount, degradation_rate, time_vals):
     return initial_amount * np.exp(-degradation_rate * time_vals)
 
 
-# def calc_reg_change(max_rate, degradation_rate, current_concentration):
-#     return max_rate - degradation_rate * current_concentration
+def calc_reg_change(max_rate, degradation_rate, current_concentration):
+    return max_rate - degradation_rate * current_concentration
+def calc_reg_deg(degradation_rate, current_concentration):
+    return -degradation_rate * current_concentration
 
 
 def plot_rate_balance(degradation_rate: float, max_rate: float, kd: float, hill_coefs: np.ndarray,
@@ -159,12 +160,12 @@ def q4b(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rat
     y_prod_time_vals = time_vals[x > kxy]
     y_prod_time = y_prod_time_vals - y_prod_time_vals[0]
     y_prod = calc_regular_production(y_max_rate, y_deg_rate, y_prod_time)
-    y_deg_time = time_vals[(x < kxy) & (time_vals > x_prod_time[-1])]
+    y_deg_time = time_vals[(x < kxy) & (time_vals > y_prod_time_vals[-1])]
     y_deg = calc_regular_degradation(y_prod[-1], y_deg_rate, y_deg_time - y_deg_time[0])
     y = np.array([0.] * np.count_nonzero(time_vals < y_prod_time_vals[0]) + list(y_prod) + list(y_deg))
     z_prod_time_vals = time_vals[(y > kyz) & (x > kxz)]
     z_prod = calc_regular_production(z_max_rate, z_deg_rate, z_prod_time_vals - z_prod_time_vals[0])
-    z_deg_time = time_vals[((x < kxz) | (y < kyz)) & (time_vals > x_prod_time[-1])]
+    z_deg_time = time_vals[((x < kxz) | (y < kyz)) & (time_vals > z_prod_time_vals[-1])]
     z_deg = calc_regular_degradation(z_prod[-1], z_deg_rate, z_deg_time - z_deg_time[0])
     no_z = np.zeros((np.count_nonzero(time_vals < z_prod_time_vals[0]),))
     z = np.hstack((no_z, z_prod, z_deg))
@@ -172,6 +173,117 @@ def q4b(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rat
                       np.max(np.hstack((x, y, z))) * 1.2, 0.)
     data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
     plot_concentrations(data, "concentration", "q4a.png", False)
+
+
+def q4c(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rate, z_deg_rate, sig_start_time, sig_stop_time, total_time, dt):
+    assert sig_start_time/dt + 2 < sig_stop_time/dt < total_time/dt
+    time_vals = np.linspace(0, total_time, num=int(total_time / dt))
+    sig_start_step = int(sig_start_time/dt)
+    sig_stop_step = int(sig_stop_time/dt)
+    no_signal_start = time_vals[0:sig_start_step]
+    x_prod_time = time_vals[sig_start_step:sig_stop_step] - time_vals[sig_start_step]
+    x_deg_time = time_vals[sig_stop_step:] - time_vals[sig_stop_step]
+    x_prod = calc_regular_production(x_max_rate, y_deg_rate, x_prod_time)
+    x_deg = calc_regular_degradation(x_prod[-1], x_deg_rate, x_deg_time)
+    x = np.array([0.] * len(no_signal_start) + list(x_prod) + list(x_deg))
+    y_prod_time_vals = time_vals[x > kxy]
+    y_prod_time = y_prod_time_vals - y_prod_time_vals[0]
+    y_prod = calc_regular_production(y_max_rate, y_deg_rate, y_prod_time)
+    y_deg_time = time_vals[(x < kxy) & (time_vals > x_prod_time[-1])]
+    y_deg = calc_regular_degradation(y_prod[-1], y_deg_rate, y_deg_time - y_deg_time[0])
+    y = np.array([0.] * np.count_nonzero(time_vals < y_prod_time_vals[0]) + list(y_prod) + list(y_deg))
+    z_prod_time_vals = time_vals[(y > kyz) | (x > kxz)]
+    z_prod = calc_regular_production(z_max_rate, z_deg_rate, z_prod_time_vals - z_prod_time_vals[0])
+    z_deg_time = time_vals[((x < kxz) & (y < kyz)) & (time_vals > z_prod_time_vals[-1])]
+    z_deg = calc_regular_degradation(z_prod[-1], z_deg_rate, z_deg_time - z_deg_time[0])
+    no_z = np.zeros((np.count_nonzero(time_vals < z_prod_time_vals[0]),))
+    z = np.hstack((no_z, z_prod, z_deg))
+    signal = np.where((sig_start_step < np.arange(time_vals.size)) & (np.arange(time_vals.size) < sig_stop_step),
+                      np.max(np.hstack((x, y, z))) * 1.2, 0.)
+    data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
+    plot_concentrations(data, "concentration", "q4a.png", False)
+
+def q4d(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rate, z_deg_rate, sig_start_time, sig_stop_time, total_time, dt):
+    assert sig_start_time/dt + 2 < sig_stop_time/dt < total_time/dt
+    time_vals = np.linspace(0, total_time, num=int(total_time / dt))
+    sig_start_step = int(sig_start_time/dt)
+    sig_stop_step = int(sig_stop_time/dt)
+    no_signal_start = time_vals[0:sig_start_step]
+    x_prod_time = time_vals[sig_start_step:sig_stop_step] - time_vals[sig_start_step]
+    x_deg_time = time_vals[sig_stop_step:] - time_vals[sig_stop_step]
+    x_prod = calc_regular_production(x_max_rate, y_deg_rate, x_prod_time)
+    x_deg = calc_regular_degradation(x_prod[-1], x_deg_rate, x_deg_time)
+    x = np.array([0.] * len(no_signal_start) + list(x_prod) + list(x_deg))
+    y_prod_time_vals = time_vals[x > kxy]
+    y_prod_time = y_prod_time_vals - y_prod_time_vals[0]
+    y_prod = calc_regular_production(y_max_rate, y_deg_rate, y_prod_time)
+    y_deg_time = time_vals[(x < kxy) & (time_vals > x_prod_time[-1])]
+    y_deg = calc_regular_degradation(y_prod[-1], y_deg_rate, y_deg_time - y_deg_time[0])
+    y = np.array([0.] * np.count_nonzero(time_vals < y_prod_time_vals[0]) + list(y_prod) + list(y_deg))
+    z_prod_time_vals_bool = (y > kyz) & (x < kxz)
+    z = np.zeros(time_vals.shape, dtype=float)
+    for i in range(1, z.size):
+        if z_prod_time_vals_bool[i]:
+            change = calc_reg_change(z_max_rate, z_deg_rate, z[i - 1])
+        else:
+            change = calc_reg_deg(z_deg_rate, z[i - 1])
+        z[i] += z[i - 1] + change * dt
+    # z_prod = calc_regular_production(z_max_rate, z_deg_rate, z_prod_time_vals - z_prod_time_vals[0])
+    # z_deg_time = time_vals[((x > kxz) | (y < kyz)) & (time_vals > z_prod_time_vals[-1])]
+    # z_deg = calc_regular_degradation(z_prod[-1], z_deg_rate, z_deg_time - z_deg_time[0])
+    # no_z = np.zeros((np.count_nonzero(time_vals < z_prod_time_vals[0]),))
+    # z = np.hstack((no_z, z_prod, z_deg))
+    signal = np.where((sig_start_step < np.arange(time_vals.size)) & (np.arange(time_vals.size) < sig_stop_step),
+                      np.max(np.hstack((x, y, z))) * 1.2, 0.)
+    data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
+    plot_concentrations(data, "concentration", "q4a.png", False)
+
+
+def q4e(kyz, kxy, kxz, x_max_rate, x_deg_rate, x_hill_coef, x_kd, y_max_rate, y_deg_rate, z_max_rate, z_deg_rate, sig_start_time, sig_stop_time, total_time, dt):
+    assert sig_start_time/dt + 2 < sig_stop_time/dt < total_time/dt
+    time_vals = np.linspace(0, total_time, num=int(total_time / dt))
+    sig_start_step = int(sig_start_time/dt)
+    sig_stop_step = int(sig_stop_time/dt)
+    no_signal_start = time_vals[0:sig_start_step]
+    x_prod_time = time_vals[sig_start_step:sig_stop_step] - time_vals[sig_start_step]
+    x_prod_time_bool = (sig_start_time < time_vals) & (time_vals < sig_stop_time)
+    x = np.zeros(time_vals.shape, dtype=float)
+    for i in range(1, x.size):
+        if x_prod_time_bool[i]:
+            change = calc_nar_change(x_deg_rate, x_hill_coef, x_kd, x_max_rate, x[i - 1])
+        else:
+            change = calc_reg_deg(x_deg_rate, x[i - 1])
+        x[i] = x[i - 1] + change * dt
+    # x_deg_time = time_vals[sig_stop_step:] - time_vals[sig_stop_step]
+    # x_prod = calc_regular_production(x_max_rate, y_deg_rate, x_prod_time)
+    # x_deg = calc_regular_degradation(x_prod[-1], x_deg_rate, x_deg_time)
+    # x = np.array([0.] * len(no_signal_start) + list(x_prod) + list(x_deg))
+    y_prod_time_vals = time_vals[x > kxy]
+    y_prod_time = y_prod_time_vals - y_prod_time_vals[0]
+    y_prod = calc_regular_production(y_max_rate, y_deg_rate, y_prod_time)
+    y_deg_time = time_vals[(x < kxy) & (time_vals > x_prod_time[-1])]
+    y_deg = calc_regular_degradation(y_prod[-1], y_deg_rate, y_deg_time - y_deg_time[0])
+    y = np.array([0.] * np.count_nonzero(time_vals < y_prod_time_vals[0]) + list(y_prod) + list(y_deg))
+    z_prod_time_vals_bool = (y > kyz) & (x < kxz)
+    z = np.zeros(time_vals.shape, dtype=float)
+    for i in range(1, z.size):
+        if z_prod_time_vals_bool[i]:
+            change = calc_reg_change(z_max_rate, z_deg_rate, z[i - 1])
+        else:
+            change = calc_reg_deg(z_deg_rate, z[i - 1])
+        z[i] += z[i - 1] + change * dt
+    # z_prod = calc_regular_production(z_max_rate, z_deg_rate, z_prod_time_vals - z_prod_time_vals[0])
+    # z_deg_time = time_vals[((x > kxz) | (y < kyz)) & (time_vals > z_prod_time_vals[-1])]
+    # z_deg = calc_regular_degradation(z_prod[-1], z_deg_rate, z_deg_time - z_deg_time[0])
+    # no_z = np.zeros((np.count_nonzero(time_vals < z_prod_time_vals[0]),))
+    # z = np.hstack((no_z, z_prod, z_deg))
+    signal = np.where((sig_start_step < np.arange(time_vals.size)) & (np.arange(time_vals.size) < sig_stop_step),
+                      np.max(np.hstack((x, y, z))) * 1.2, 0.)
+    data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
+    plot_concentrations(data, "concentration", "q4a.png", False)
+
+
+
 
 
 if __name__ == "__main__":
@@ -184,5 +296,8 @@ if __name__ == "__main__":
     kxz_4b = 0.65
     # q1a(kd, hill_coef, max_rate, degradation_rate)
     # q1b(kd, max_rate, degradation_rate)
-    # q4a(kyz_4a, max_rate, degradation_rate, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    q4a(kyz_4a, max_rate, degradation_rate, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
     q4b(kyz_4a, kxy_4b, kxz_4b, max_rate / 1.5, degradation_rate * 2, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    q4c(kyz_4a, kxy_4b, kxz_4b, max_rate / 1.5, degradation_rate * 2, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    q4d(kyz_4a, kxy_4b, kxz_4b, max_rate / 1.5, degradation_rate * 2, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    q4e(kyz_4a, kxy_4b, kxz_4b, max_rate*1.5, degradation_rate * 2, hill_coef, kd, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
