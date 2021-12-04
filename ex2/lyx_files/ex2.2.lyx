@@ -297,7 +297,7 @@ status open
 \begin_inset Formula $st.s/2$
 \end_inset
 
-, וכותרת של זמן לציר 
+ )להוסיף קו אנכי(, וכותרת של זמן לציר 
 \begin_inset Formula $x$
 \end_inset
 
@@ -734,11 +734,8 @@ status collapsed
 \begin_inset Formula $OR$
 \end_inset
 
- על שני איברים זהים זה פשוט לבדוק אם הגענו לאחד מהם )בה
-\begin_inset Quotes erd
-\end_inset
-
-ג בחרנו ב-
+ על שני איברים זהים זה פשוט לבדוק אם הגענו לאחד מהם )בלי הגבלת הכלליות בחרנו
+ ב-
 \begin_inset Formula $K_{YW}$
 \end_inset
 
@@ -746,6 +743,18 @@ status collapsed
 \begin_inset Formula 
 \[
 K_{YW}\,and\,K_{ZW}=K_{YW}\,and\,K_{YW}=K_{YW}=K_{YW}\,or\,K_{YW}=K_{YW}\,or\,K_{ZW}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומטרנזטיביות:
+\begin_inset Formula 
+\[
+K_{YW}\,and\,K_{ZW}=K_{YW}\,or\,K_{ZW}
 \]
 
 \end_inset
@@ -791,7 +800,7 @@ K_{YW}\,and\,K_{ZW}=K_{YW}\,and\,K_{YW}=K_{YW}=K_{YW}\,or\,K_{YW}=K_{YW}\,or\,K_
 \begin_inset Graphics
 	filename plots/q3.png
 	lyxscale 50
-	scale 30
+	scale 50
 
 \end_inset
 
@@ -839,17 +848,21 @@ K_{XZ_{1}}<K_{XZ_{2}},K_{YZ_{2}}<K_{YZ_{1}}
 \begin_inset Formula $K_{YZ_{2}}$
 \end_inset
 
-.
+ )גם בהיווצרות וגם בפירוק(.
  לכן נגדיר את 
-\begin_inset Formula $K_{XY}=K_{XZ_{2}}$
+\begin_inset Formula $K_{XY}=K_{XZ_{1}}$
 \end_inset
 
 , ונקבל ש-
-\begin_inset Formula $K_{XY}<K_{XZ_{1}}$
+\begin_inset Formula $K_{XY}<K_{XZ_{2}}$
 \end_inset
 
- ולכן בהכרח נגיע ל-
-\begin_inset Formula $K_{XZ_{1}}$
+ ולכן בפירוק 
+\begin_inset Formula $X$
+\end_inset
+
+ בהכרח נגיע ל-
+\begin_inset Formula $K_{XZ_{2}}$
 \end_inset
 
  לפני 
@@ -866,15 +879,27 @@ K_{XZ_{1}}<K_{XZ_{2}},K_{YZ_{2}}<K_{YZ_{1}}
 \end_inset
 
  תתחיל לרדת ונגיע ל-
-\begin_inset Formula $K_{YZ_{1}}$
-\end_inset
-
- ול-
 \begin_inset Formula $K_{YZ_{2}}$
 \end_inset
 
-, אז קיבלנו את הנדרש.
- 
+ )ל-
+\begin_inset Formula $K_{YZ_{1}}$
+\end_inset
+
+(, אז קיבלנו את הנדרש.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ קיבלנו:
+\begin_inset Formula 
+\[
+K_{YZ_{2}}<K_{YZ_{1}},K_{XY}=K_{XZ_{1}}<K_{XZ_{2}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -999,7 +1024,7 @@ K_{XZ_{1}}<K_{XZ_{2}},K_{YZ_{2}}<K_{YZ_{1}}
 \end_inset
 
  בעל מקדם היל 
-\begin_inset Formula $n=`$
+\begin_inset Formula $n=1$
 \end_inset
 
  אז קצב הייצור הוא 
@@ -1092,7 +1117,7 @@ K_{XZ_{1}}<K_{XZ_{2}},K_{YZ_{2}}<K_{YZ_{1}}
 : 
 \begin_inset Formula 
 \[
-\b'\left(Y\right)=\dfrac{81\cdot X}{K_{d}+81\cdot X}\overset{*}{=}\dfrac{81\cdot X}{9X+81\cdot X}=\frac{81}{90}=0.9
+\b'\left(Y\right)=\dfrac{81\cdot X}{K_{d}+81\cdot X}=\dfrac{81\cdot X}{9X+81\cdot X}=\frac{81}{90}=0.9
 \]
 
 \end_inset
