@@ -72,7 +72,7 @@ def plot_rate_balance(degradation_rate: float, max_rate: float, kd: float, hill_
             "value": "Rate",
             "variable": "Regulation"
         })
-    plt.write_image(os.path.join(PLOT_PATH, fig_name))
+    plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
     plt.show()
 
 
@@ -93,7 +93,7 @@ def plot_concentrations(data, variable, fig_name, add_half_concentration=True):
             plt.add_vline(x=half_time, line_dash="dot", line_color="LightBlue")
     plt.update_xaxes(showticklabels=False)
     plt.show()
-    plt.write_image(os.path.join(PLOT_PATH, fig_name))
+    plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
 
 
 def plot_concentrations_q4(data, fig_name, title, **kwargs):
@@ -115,7 +115,7 @@ def plot_concentrations_q4(data, fig_name, title, **kwargs):
         for attrs in kwargs["vlines"]:
             plt.add_vline(**attrs, line_color="LightBlue")
     plt.show()
-    plt.write_image(os.path.join(PLOT_PATH, fig_name))
+    plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
 
 
 def _set_color(shape):
