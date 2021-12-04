@@ -201,7 +201,7 @@ def q4b(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rat
     z = _create_reg_data_series(z_prod_time_vals, z_max_rate, z_deg_rate, dt)
     hlines = [dict(y=kyz, line_dash="dash", annotation_text="kyz", annotation_position="top left"),
               dict(y=kxy, line_dash="dash", annotation_text="kxy", annotation_position="top left"),
-              dict(y=kxz, line_dash="dash", annotation_text="kzx", annotation_position="top left")]
+              dict(y=kxz, line_dash="dash", annotation_text="kxz", annotation_position="top left")]
     vlines = [dict(x=np.where(y == 0., np.inf, y).argmin(), line_dash="dot"),
               dict(x=np.where(z == 0., np.inf, z).argmin(), line_dash="dot"),
               dict(x=y.argmax(), line_dash="dot"),
@@ -241,7 +241,7 @@ def q4d(kyz, kxy, kxz, x_max_rate, x_deg_rate, y_max_rate, y_deg_rate, z_max_rat
     y_changes = ((y_prd_time ^ np.roll(y_prd_time, 1))[1:-1]).nonzero()[0]
     hlines = [dict(y=kyz, line_dash="dash", annotation_text="kyz", annotation_position="top left"),
               dict(y=kxy, line_dash="dash", annotation_text="kxy", annotation_position="top left"),
-              dict(y=kxz, line_dash="dash", annotation_text="kzx", annotation_position="top left")]
+              dict(y=kxz, line_dash="dash", annotation_text="kxz", annotation_position="top left")]
     vlines = [dict(x=change, line_dash="dot") for change in np.hstack((z_changes, y_changes))]
     signal = np.where(signal_time_vals, np.max(np.hstack((x, y, z))) * 1.1, 0.)
     data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
@@ -263,7 +263,7 @@ def q4e(kyz, kxy, kxz, x_max_rate, x_deg_rate, hill_coef, kd, y_max_rate, y_deg_
     y_changes = ((y_prd_time ^ np.roll(y_prd_time, 1))[1:-1]).nonzero()[0]
     hlines = [dict(y=kyz, line_dash="dash", annotation_text="kyz", annotation_position="top left"),
               dict(y=kxy, line_dash="dash", annotation_text="kxy", annotation_position="top left"),
-              dict(y=kxz, line_dash="dash", annotation_text="kzx", annotation_position="top left")]
+              dict(y=kxz, line_dash="dash", annotation_text="kxz", annotation_position="top left")]
     vlines = [dict(x=change, line_dash="dot") for change in np.hstack((z_changes, y_changes))]
     signal = np.where(signal_time_vals, np.max(np.hstack((x, y, z))) * 1.1, 0.)
     data = pd.DataFrame(np.vstack((x, y, z, signal)).T, columns=["X", "Y", "Z", "signal"])
@@ -279,11 +279,11 @@ if __name__ == "__main__":
     kyz_4a = 0.5
     kxy_4b = 0.4
     kxz_4b = 0.65
-    q1a(kd, hill_coef, max_rate, degradation_rate)
-    q1b(kd, max_rate, degradation_rate)
-    q4a(kyz_4a, max_rate, degradation_rate, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
-    q4b(kyz_4a * 1.2, kxy_4b, kxz_4b / 3, max_rate / 1.5, degradation_rate * 2, max_rate / 2, degradation_rate, max_rate/ 1.3, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
-    q4c(kyz_4a, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
-    q4d(kyz_4a / 2, kxy_4b / 4, kxz_4b - 0.2, max_rate / 1.5, degradation_rate * 2, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
-    q4e(kyz_4a, kxy_4b, kxz_4b, max_rate * 1.5, degradation_rate * 2, hill_coef, kd, max_rate / 1.5, degradation_rate,
-        max_rate / 3, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    # q1a(kd, hill_coef, max_rate, degradation_rate)
+    # q1b(kd, max_rate, degradation_rate)
+    # q4a(kyz_4a, max_rate, degradation_rate, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    q4b(kyz_4a * 1.2, kxy_4b, kxz_4b / 3, max_rate / 1.5, degradation_rate * 2, max_rate / 2, degradation_rate * 0.8, max_rate/ 1.3, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    # q4c(kyz_4a, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    # q4d(kyz_4a / 2, kxy_4b / 4, kxz_4b - 0.2, max_rate / 1.5, degradation_rate * 2, max_rate, degradation_rate * 1.5, max_rate, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)
+    # q4e(kyz_4a, kxy_4b, kxz_4b, max_rate * 1.5, degradation_rate * 2, hill_coef, kd, max_rate / 1.5, degradation_rate,
+    #     max_rate / 3, degradation_rate, 0.2, 1.2, TOTAL_TIME, DT)

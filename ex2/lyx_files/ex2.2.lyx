@@ -942,16 +942,312 @@ K_{YZ_{2}}<K_{YZ_{1}},K_{XY}=K_{XZ_{1}}<K_{XZ_{2}}
 4
 \end_layout
 
+\begin_layout Standard
+נציין שכל הגרפים הם 
+\begin_inset Quotes eld
+\end_inset
+
+איכותיים
+\begin_inset Quotes erd
+\end_inset
+
+.
+ כלומר אין יחידות ספציפיות לריכוז ולזמן וגם לא ליחסים בין הריכוזים של החומרים
+ במודל.
+\end_layout
+
+\begin_layout Standard
+קיימים קווים מדריכים אנכיים לסיוע במציאת נקודות משמעותיות - תחילת יצירה
+ והפסקתה.
+\end_layout
+
 \begin_layout Subsection*
 )א(
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q4a.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ניתן לראות שבעת קיום הסיגנל )בכחול( חומר 
+\begin_inset Formula $Y$
+\end_inset
+
+ מתחיל להיווצר ובהגיעו לרף קריטי 
+\begin_inset Formula $kyz$
+\end_inset
+
+ חומר 
+\begin_inset Formula $Z$
+\end_inset
+
+ מתחיל להיווצר גם הוא.
+\end_layout
+
+\begin_layout Standard
+הרף הקריטי מאפשר סינון 
+\begin_inset Quotes eld
+\end_inset
+
+קפיצות
+\begin_inset Quotes erd
+\end_inset
+
+ בריכוז החומר ה
+\begin_inset Quotes erd
+\end_inset
+
+מסגנל
+\begin_inset Quotes erd
+\end_inset
+
+ ביצירת חומר 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בהפסקת הסיגנל שני החומרים מתחילים להתפרק, כמתבקש מלוגיקת 
+\begin_inset Formula $AND$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection*
 )ב(
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q4b.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאן חומר 
+\begin_inset Formula $X$
+\end_inset
+
+ נבנה לפני תחילת הפקת החומרים 
+\begin_inset Formula $Y,Z$
+\end_inset
+
+.
+ כלומר, יש סינון נוסף.
+\end_layout
+
+\begin_layout Standard
+ניתן לראות ששני הסיפים משפיעים על הפקת חומר 
+\begin_inset Formula $Z$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+חומר 
+\begin_inset Formula $Y$
+\end_inset
+
+ מצטבר לאט יחסית והפעלת יצירת 
+\begin_inset Formula $Z$
+\end_inset
+
+ מתעכבת ביחס לסיגנל.
+\end_layout
+
+\begin_layout Standard
+יחד עם זאת, חומר 
+\begin_inset Formula $X$
+\end_inset
+
+ מתפרק מהר וזמן קצר למדי לאחר תום הסיגנל הייצור של 
+\begin_inset Formula $Z$
+\end_inset
+
+ מפסיק.
+\end_layout
+
 \begin_layout Subsection*
 )ג(
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q4c.png
+	rotateOrigin leftBottom
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הייצור של 
+\begin_inset Formula $Z$
+\end_inset
+
+ מתחיל מיד עם הסיגנל, אבל לאחר תום הסיגנל לוקח מעט זמן ל 
+\begin_inset Formula $Y$
+\end_inset
+
+ להתפרק במידה שתכבה את הביטוי של 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+העיכוב הזה מאפשר להמשיך לייצר את 
+\begin_inset Formula $Z$
+\end_inset
+
+ גם כאשר רמת הסיגנל יורדת בחדות לזמן קצר
+\end_layout
+
+\begin_layout Subsection*
+)ד(
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q4d.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ההתנהגות פה חריגה יחסית לשאר דגמי הבקרה.
+ רף הפעלה נמוך של 
+\begin_inset Formula $Y$
+\end_inset
+
+ ביחס ל 
+\begin_inset Formula $X$
+\end_inset
+
+ מאפשר את תחילת יצורו המהיר יחסית.
+\end_layout
+
+\begin_layout Standard
+רף הפעלה נמוך יחסית של 
+\begin_inset Formula $Z$
+\end_inset
+
+ לעומת 
+\begin_inset Formula $Y$
+\end_inset
+
+ גם מאפשר את תחילת ייצורו המהיר, אך עליית 
+\begin_inset Formula $X$
+\end_inset
+
+ לרמה שמשתקת את הביטוי של 
+\begin_inset Formula $Z$
+\end_inset
+
+ מתרחשת במהרה וכמותו יורדת.
+\end_layout
+
+\begin_layout Standard
+לאחר מכן חומר 
+\begin_inset Formula $X$
+\end_inset
+
+ מתפרק מהר וחומר 
+\begin_inset Formula $Z$
+\end_inset
+
+ חוזר להצטבר עד פירוק מספיק של חומר 
+\begin_inset Formula $Y$
+\end_inset
+
+ ופירוק של 
+\begin_inset Formula $Z$
+\end_inset
+
+ גם כן.
+\end_layout
+
+\begin_layout Standard
+כלומר, ניתן לראות שני 
+\begin_inset Quotes eld
+\end_inset
+
+פרצי
+\begin_inset Quotes erd
+\end_inset
+
+ ביטוי של 
+\begin_inset Formula $Z$
+\end_inset
+
+: זמן קצר לאחר תחילת הסיגנל וזמן קצר לאחר סיומו, בשניהם לפרק זמן מצומצם.
+\end_layout
+
+\begin_layout Subsubsection*
+)ה(
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/q4e.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+העליה החדה בביטוי 
+\begin_inset Formula $X$
+\end_inset
+
+ שמתאפשרת בעזרת אוטורגולציה שלילית מפסיקה את ביטוי 
+\begin_inset Formula $Z$
+\end_inset
+
+ בחדות יחסית לאחר תחילת הסיגנל.
+\end_layout
+
+\begin_layout Standard
+העיכוב בפירוק החומרים 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מאפשרים מרווח זמן בין היעלמות הסיגנל לבין החזרה לייצור של 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+באופן זה ירידה רגעית של הסיגנל לא תחזיר את 
+\begin_inset Formula $Z$
+\end_inset
+
+ לביטוי, בדומה לסינון שראינו בסעיף ב' בזמן הפסקת הסיגנל.
 \end_layout
 
 \begin_layout Section*
