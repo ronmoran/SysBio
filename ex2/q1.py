@@ -11,12 +11,6 @@ TOTAL_TIME = 2.5
 PLOT_PATH = r"lyx_files\plots"
 SAVE_PLOTS = True
 
-COLORS = {"X": "purple",
-          "Y": "red",
-          "Z": "green",
-          "signal": "blue"
-}
-
 
 def simulate_negative_autoregulation(max_rate: float, degradation_rate: float, kd: float, hill_coef: int,
                                      total_time: float, dt: float):
@@ -121,10 +115,6 @@ def plot_stacked_q4(data, fig_name, title, y_axis_titles, **kwargs):
     fig.show()
     if SAVE_PLOTS:
         fig.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
-
-
-def _set_color(shape):
-    shape.line.color = COLORS[shape.name]
 
 
 def q1a(kd, hill_coef, max_rate, degradation_rate):
