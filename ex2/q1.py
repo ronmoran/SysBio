@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 DT = 1e-3
 TOTAL_TIME = 2.5
 PLOT_PATH = r"lyx_files\plots"
+SAVE_PLOTS = True
 
 COLORS = {"X": "purple",
           "Y": "red",
@@ -74,8 +75,9 @@ def plot_rate_balance(degradation_rate: float, max_rate: float, kd: float, hill_
             "value": "Rate",
             "variable": "Regulation"
         })
-    # plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
     plt.show()
+    if SAVE_PLOTS:
+        plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
 
 
 def plot_concentrations(data, variable, fig_name, add_half_concentration=True):
@@ -96,7 +98,8 @@ def plot_concentrations(data, variable, fig_name, add_half_concentration=True):
                           annotation_position='bottom right')
     plt.update_xaxes(showticklabels=False)
     plt.show()
-    plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
+    if SAVE_PLOTS:
+        plt.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
 
 
 def plot_stacked_q4(data, fig_name, title, y_axis_titles, **kwargs):
@@ -116,7 +119,8 @@ def plot_stacked_q4(data, fig_name, title, y_axis_titles, **kwargs):
     fig.update_yaxes(showticklabels=False)
     fig.update_layout(showlegend=False)
     fig.show()
-    fig.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
+    if SAVE_PLOTS:
+        fig.write_image(os.path.join(PLOT_PATH, fig_name), width=1280, height=720)
 
 
 def _set_color(shape):
