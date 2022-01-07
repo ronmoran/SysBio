@@ -109,9 +109,10 @@ def plot_time_series_stacked(x_series, y_series, z_series, output_path=None, sho
 
 def q3(total_time, upto_fac=4, out_path=None, **consts):
     x_vals, y_vals, z_vals = iterate_foodchain_model(total_time, **consts)
-    draw_foodchain(x_vals, y_vals, z_vals, out_path + "_3d.jpg")
+    draw_foodchain(x_vals, y_vals, z_vals, out_path + "_3d.jpg" if out_path is not None else None)
     upto = int(total_time / DT / upto_fac)
-    plot_time_series_stacked(x_vals[:upto], y_vals[:upto], z_vals[:upto], out_path + "_time_plot.jpg", **consts)
+    plot_time_series_stacked(x_vals[:upto], y_vals[:upto], z_vals[:upto],
+                             out_path + "_time_plot.jpg" if out_path is not None else None, **consts)
 
 
 if __name__ == "__main__":
@@ -121,5 +122,5 @@ if __name__ == "__main__":
     q3(total_time, a1=5, b1=3, a2=0.1, b2=2, d1=0.4, d2=0.01, x0=1, y0=1, z0=2, out_path=r"graphs\different_init_values") # keep initial values dont matter (chaos)
     q3(total_time, a1=5, b1=30, a2=0.1, b2=20, d1=0.4, d2=0.01, x0=1, y0=0.2, z0=8, out_path=r"graphs\quick_stead_state")  # quick steady state, big b values
     q3(total_time, a1=5, b1=1.3, a2=0.1, b2=1.5, d1=0.4, d2=0.01, x0=1, y0=0.2, z0=8, out_path=r"graphs\stable_after_oscillations")  # stablizes not before oscillating, small b values
-    q3(total_time, a1=11.5, b1=3, a2=0.08, b2=1.5, d1=0.4, d2=0.01, x0=1, y0=0.2, z0=8, out_path=r"graphs\chaos_z_decrease")  # chaos, but cyclic
+    q3(total_time, a1=15, b1=3, a2=0.5, b2=2, d1=0.4, d2=0.01, x0=1, y0=0.2, z0=8, out_path=r"graphs\chaos_z_decrease")  # chaos, but cyclic
     q3(total_time, upto_fac=2, a1=9, b1=3, a2=0.8, b2=2, d1=2, d2=0.01, x0=1, y0=0.2, z0=8, out_path=r"graphs\late_equilibrium")  # Large a values also lead to equil, albeit interesting
