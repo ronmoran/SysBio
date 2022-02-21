@@ -1,0 +1,240 @@
+>frag-119_site_1 offset= 30
+CCAGAC
+>frag-117_site_1 offset= 8 RC
+CCAGAC
+>frag-116_site_1 offset= 20
+CCAGAC
+>frag-115_site_1 offset= 32
+CCAGAC
+>frag-114_site_1 offset= 13
+CCAGAC
+>frag-112_site_1 offset= 7
+CCAGAC
+>frag-111_site_1 offset= 31
+CCAGAC
+>frag-110_site_1 offset= 32
+CCAGAC
+>frag-109_site_1 offset= 9
+CCAGAC
+>frag-107_site_1 offset= 13
+CCAGAC
+>frag-106_site_1 offset= 13
+CCAGAC
+>frag-104_site_1 offset= 26
+CCAGAC
+>frag-102_site_1 offset= 9
+CCAGAC
+>frag-100_site_1 offset= 3
+CCAGAC
+>frag-99_site_1 offset= 28
+CCAGAC
+>frag-98_site_1 offset= 26
+CCAGAC
+>frag-97_site_1 offset= 7
+CCAGAC
+>frag-96_site_1 offset= 5
+CCAGAC
+>frag-95_site_1 offset= 5
+CCAGAC
+>frag-94_site_1 offset= 6
+CCAGAC
+>frag-93_site_1 offset= 13
+CCAGAC
+>frag-91_site_1 offset= 6
+CCAGAC
+>frag-90_site_1 offset= 4
+CCAGAC
+>frag-89_site_1 offset= 15
+CCAGAC
+>frag-88_site_1 offset= 23
+CCAGAC
+>frag-87_site_1 offset= 18
+CCAGAC
+>frag-86_site_1 offset= 17
+CCAGAC
+>frag-85_site_1 offset= 28
+CCAGAC
+>frag-84_site_1 offset= 24
+CCAGAC
+>frag-83_site_1 offset= 18
+CCAGAC
+>frag-81_site_1 offset= 31
+CCAGAC
+>frag-80_site_1 offset= 20
+CCAGAC
+>frag-78_site_1 offset= 21
+CCAGAC
+>frag-77_site_1 offset= 4
+CCAGAC
+>frag-76_site_1 offset= 8
+CCAGAC
+>frag-74_site_1 offset= 3
+CCAGAC
+>frag-73_site_1 offset= 28
+CCAGAC
+>frag-72_site_1 offset= 31
+CCAGAC
+>frag-71_site_1 offset= 26
+CCAGAC
+>frag-70_site_1 offset= 25
+CCAGAC
+>frag-68_site_1 offset= 17
+CCAGAC
+>frag-67_site_1 offset= 20
+CCAGAC
+>frag-65_site_1 offset= 11
+CCAGAC
+>frag-64_site_1 offset= 17
+CCAGAC
+>frag-63_site_1 offset= 31
+CCAGAC
+>frag-62_site_1 offset= 11
+CCAGAC
+>frag-61_site_1 offset= 29
+CCAGAC
+>frag-59_site_1 offset= 27
+CCAGAC
+>frag-58_site_1 offset= 25
+CCAGAC
+>frag-57_site_1 offset= 4
+CCAGAC
+>frag-56_site_1 offset= 25
+CCAGAC
+>frag-54_site_1 offset= 22
+CCAGAC
+>frag-51_site_1 offset= 30
+CCAGAC
+>frag-50_site_1 offset= 13
+CCAGAC
+>frag-49_site_1 offset= 14
+CCAGAC
+>frag-47_site_1 offset= 28
+CCAGAC
+>frag-46_site_1 offset= 28
+CCAGAC
+>frag-44_site_1 offset= 29
+CCAGAC
+>frag-43_site_1 offset= 5
+CCAGAC
+>frag-40_site_1 offset= 6
+CCAGAC
+>frag-39_site_1 offset= 3
+CCAGAC
+>frag-38_site_1 offset= 24
+CCAGAC
+>frag-37_site_1 offset= 24
+CCAGAC
+>frag-36_site_1 offset= 15
+CCAGAC
+>frag-35_site_1 offset= 27
+CCAGAC
+>frag-34_site_1 offset= 19
+CCAGAC
+>frag-33_site_1 offset= 27
+CCAGAC
+>frag-32_site_1 offset= 12
+CCAGAC
+>frag-31_site_1 offset= 22
+CCAGAC
+>frag-30_site_1 offset= 16
+CCAGAC
+>frag-29_site_1 offset= 19
+CCAGAC
+>frag-28_site_1 offset= 10
+CCAGAC
+>frag-27_site_1 offset= 4
+CCAGAC
+>frag-26_site_1 offset= 28
+CCAGAC
+>frag-25_site_1 offset= 15
+CCAGAC
+>frag-24_site_1 offset= 4
+CCAGAC
+>frag-23_site_1 offset= 10
+CCAGAC
+>frag-22_site_1 offset= 19
+CCAGAC
+>frag-21_site_1 offset= 14
+CCAGAC
+>frag-20_site_1 offset= 14
+CCAGAC
+>frag-19_site_1 offset= 19
+CCAGAC
+>frag-18_site_1 offset= 22
+CCAGAC
+>frag-17_site_1 offset= 24
+CCAGAC
+>frag-16_site_1 offset= 17
+CCAGAC
+>frag-15_site_1 offset= 25
+CCAGAC
+>frag-14_site_1 offset= 6
+CCAGAC
+>frag-13_site_1 offset= 19
+CCAGAC
+>frag-12_site_1 offset= 26
+CCAGAC
+>frag-11_site_1 offset= 8
+CCAGAC
+>frag-10_site_1 offset= 6
+CCAGAC
+>frag-9_site_1 offset= 31
+CCAGAC
+>frag-8_site_1 offset= 4
+CCAGAC
+>frag-7_site_1 offset= 24
+CCAGAC
+>frag-5_site_1 offset= 13
+CCAGAC
+>frag-4_site_1 offset= 20
+CCAGAC
+>frag-2_site_1 offset= 13
+CCAGAC
+>frag-1_site_1 offset= 4
+CCAGAC
+>frag-0_site_1 offset= 8
+CCAGAC
+>frag-66_site_1 offset= 31
+CCCGAC
+>frag-55_site_1 offset= 4
+CCCGAC
+>frag-48_site_1 offset= 27
+CCCGAC
+>frag-42_site_1 offset= 22
+CCCGAC
+>frag-41_site_1 offset= 7
+CCCGAC
+>frag-3_site_1 offset= 5
+CCCGAC
+>frag-118_site_1 offset= 12
+GCAGAC
+>frag-103_site_1 offset= 16
+GCAGAC
+>frag-101_site_1 offset= 16
+GCAGAC
+>frag-75_site_1 offset= 3
+GCAGAC
+>frag-52_site_1 offset= 23
+GCAGAC
+>frag-113_site_1 offset= 3
+CCGGAC
+>frag-82_site_1 offset= 17
+CCGGAC
+>frag-69_site_1 offset= 8
+CCGGAC
+>frag-60_site_1 offset= 54 RC
+CCGGAC
+>frag-105_site_1 offset= 7
+CGAGAC
+>frag-92_site_1 offset= 14
+CGAGAC
+>frag-79_site_1 offset= 11
+CGAGAC
+>frag-6_site_1 offset= 10
+TCAGAC
+>frag-108_site_1 offset= 10
+ACAGAC
+>frag-45_site_1 offset= 16
+CTAGAC
+>frag-53_site_1 offset= 32
+TCCGAC
