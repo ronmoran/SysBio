@@ -343,7 +343,7 @@ status open
 \begin_layout Plain Layout
 
 \lang english
-Production(#/min)
+Production (#/min)
 \end_layout
 
 \end_inset
@@ -354,7 +354,7 @@ Production(#/min)
 \begin_layout Plain Layout
 
 \lang english
-Removal(1/min)
+Removal (1/min)
 \end_layout
 
 \end_inset
@@ -365,7 +365,7 @@ Removal(1/min)
 \begin_layout Plain Layout
 
 \lang english
-Initial(#)
+Initial (#)
 \end_layout
 
 \end_inset
@@ -852,7 +852,7 @@ g10
 \end_layout
 
 \begin_layout Standard
-\align center
+\align right
 גרף המציג את התוצאות המשוערכות למול מיצוע התוצאות הניסויות:
 \end_layout
 
