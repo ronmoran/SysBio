@@ -14,23 +14,23 @@ def question1():
     time_points_30min = np.array(range(0, experiment_time + 1, 30))
     gaussian_repeats_30min, poisson_repeats_30min = simulate_experiment_repeats(time_points_30min, create_rate,
                                                                                 decay_rate, initial_quantity)
-    plot_simulations(gaussian_repeats_30min, poisson_repeats_30min)
+    # plot_simulations(gaussian_repeats_30min, poisson_repeats_30min)
     # --- estimate parameters and plot results
     gaussian_30min_estimators = estimate_parameters_from_experiments(gaussian_repeats_30min, time_points_30min)
     plot_parameters_estimations(gaussian_30min_estimators,
                                 "Single Repeats of Population (Gaussian Noise)", 30, create_rate, decay_rate,
-                                initial_quantity)
+                                initial_quantity, "SG30")
     plot_parameters_estimations(triple_estimators_estimations(gaussian_30min_estimators),
                                 "Triple Repeats of Population (Gaussian Noise)", 30, create_rate, decay_rate,
-                                initial_quantity)
+                                initial_quantity, "TG30")
     # create_params_estimations_triple_exps(gaussian_repeats_30min, time_points_30min) TODO
     poisson_30min_estimators = estimate_parameters_from_experiments(poisson_repeats_30min, time_points_30min)
     plot_parameters_estimations(poisson_30min_estimators,
                                 "Single Repeats of Single Cell (Poisson Noise)", 30, create_rate, decay_rate,
-                                initial_quantity)
+                                initial_quantity, "SP30")
     plot_parameters_estimations(triple_estimators_estimations(poisson_30min_estimators),
                                 "Single Repeats of Single Cell (Poisson Noise)", 30, create_rate, decay_rate,
-                                initial_quantity)
+                                initial_quantity, "TP30")
 
     # ------- 1c ---------
     time_points_10min = np.array(range(0, experiment_time + 1, 10))
@@ -40,10 +40,10 @@ def question1():
     # estimate parameters and plot results
     plot_parameters_estimations(estimate_parameters_from_experiments(gaussian_repeats_10min, time_points_10min),
                                 "Single Repeats of Population (Gaussian Noise)", 10, create_rate, decay_rate,
-                                initial_quantity)
+                                initial_quantity, "SG10")
     plot_parameters_estimations(estimate_parameters_from_experiments(poisson_repeats_10min, time_points_10min),
                                 "Single Repeats of Single Cell (Poisson Noise)", 10, create_rate, decay_rate,
-                                initial_quantity)
+                                initial_quantity, "SP10")
 
 
 def production_base_function(time: np.ndarray, production_rate: float, removal_rate: float,
@@ -64,14 +64,17 @@ def simulate_experiment_repeats(time_points: np.ndarray, create_rate: float, dec
 
 def plot_simulations(gaussian_repeats: pd.DataFrame, poisson_repeats: pd.DataFrame):
     gaussian_repeats.plot(title='mRNA Levels of Population (Simulated With Gaussian Noise)',
-                          xlabel='Time (minutes)', ylabel='mRNA (molecules)')
+                          xlabel='Time (minutes)', ylabel='mRNA (# molecules)')
+    plt.savefig("plots/gaussian_simulation.png")
     plt.show()
-    poisson_repeats.plot(title='mRNA Levels of Single Cells (Simulated With Poisson Noise)')
+    poisson_repeats.plot(title='mRNA Levels of Single Cells (Simulated With Poisson Noise)',
+                         xlabel='Time (minutes)', ylabel='mRNA (# molecules)')
+    plt.savefig("plots/poisson_simulation.png")
     plt.show()
 
 
 def estimate_parameters_from_experiments(experiment_repeats: pd.DataFrame, time_points: np.ndarray):
-    params_estimations = pd.DataFrame(columns=['create_rate', 'decay_rate', 'initial_quantity'])
+    params_estimations = pd.DataFrame(columns=["Create Rate", "Decay Rate", "Initial Quantity"])
     for repeat in experiment_repeats:
         params_opt, params_cov = optimize.curve_fit(f=production_base_function, xdata=time_points,
                                                     ydata=experiment_repeats[repeat], bounds=(0, np.inf))
@@ -80,7 +83,7 @@ def estimate_parameters_from_experiments(experiment_repeats: pd.DataFrame, time_
 
 
 def triple_estimators_estimations(params_estimations: pd.DataFrame):
-    triplet_params_estimations = pd.DataFrame(columns=['create_rate', 'decay_rate', 'initial_quantity'])
+    triplet_params_estimations = pd.DataFrame(columns=["Create Rate", "Decay Rate", "Initial Quantity"])
     for i in range(0, params_estimations.shape[0], 1):  # TODO - 1 or 3
         if i + 3 < params_estimations.shape[0]:
             triplet_params_estimations.loc[f'{i}'] = params_estimations.iloc[i:i+3, :].mean(axis=0)
@@ -89,23 +92,25 @@ def triple_estimators_estimations(params_estimations: pd.DataFrame):
 
 # TODO - how
 def triple_experiments_parameter_estimation(experiment_repeats: pd.DataFrame, time_points: np.array):
-    params_estimations = pd.DataFrame(columns=['create_rate', 'decay_rate', 'initial_quantity'])
+    params_estimations = pd.DataFrame(columns=["Create Rate", "Decay Rate", "Initial Quantity"])
     params_opt, params_cov = optimize.curve_fit(f=production_base_function,
                                                 xdata=np.array([time_points, time_points, time_points]).T,
                                                 ydata=experiment_repeats.iloc[:, 0:3], bounds=(0, np.inf))
 
 
 def plot_parameters_estimations(params_estimations: pd.DataFrame, experiment_kind: str, sample_times: float,
-                                real_create_rate: float, real_decay_rate: float, real_start_amount: float):
-    # plot_single_param_estimation(params_estimations['create_rate'], new_create_rate, 'Creation Rate', 'box')
-    # plot_single_param_estimation(params_estimations['decay_rate'], decay_rate, 'Decay Rate', 'box')
-    # plot_single_param_estimation(params_estimations['initial_quantity'], start_amount, 'Initial Quantity', 'box')
+                                real_create_rate: float, real_decay_rate: float, real_start_amount: float,
+                                plot_save_name: str):
+    # plot_single_param_estimation(params_estimations["Create Rate"], new_create_rate, 'Creation Rate', 'box')
+    # plot_single_param_estimation(params_estimations["Decay Rate"], decay_rate, 'Decay Rate', 'box')
+    # plot_single_param_estimation(params_estimations["Initial Quantity"], start_amount, 'Initial Quantity', 'box')
     params_estimations.plot(title=f'Estimations of Parameters Fitted By {experiment_kind} Experiments '
                                   f'Sampled Every {sample_times} Minutes\n '
-                                  f'{mse_title_helper(params_estimations["create_rate"], real_create_rate)}                        '
-                                  f'{mse_title_helper(params_estimations["decay_rate"], real_decay_rate)}                        '
-                                  f'{mse_title_helper(params_estimations["initial_quantity"], real_start_amount)}',
+                                  f'{mse_title_helper(params_estimations["Create Rate"], real_create_rate)}                        '
+                                  f'{mse_title_helper(params_estimations["Decay Rate"], real_decay_rate)}                        '
+                                  f'{mse_title_helper(params_estimations["Initial Quantity"], real_start_amount)}',
                             subplots=True, kind='box', figsize=(15, 5))
+    plt.savefig(f"plots/{plot_save_name}.png")
     plt.show()
 
 
