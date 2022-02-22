@@ -1609,7 +1609,7 @@ NRMSE
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
 <column alignment="right" valignment="top">
 <column alignment="center" valignment="top">
@@ -1644,6 +1644,51 @@ FOXH1
 \series bold
 \lang english
 SMAD2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+PSSM:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{bmatrix}A & C & G & T\\
+0.008333 & 0.933333 & 0.041667 & 0.016667\\
+0.000000 & 0.966667 & 0.025000 & 0.008333\\
+0.908333 & 0.058333 & 0.033333 & 0.000000\\
+0.000000 & 0.000000 & 1.000000 & 0.000000\\
+1.000000 & 0.000000 & 0.000000 & 0.000000\\
+0.000000 & 1.000000 & 0.000000 & 0.000000
+\end{bmatrix}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
