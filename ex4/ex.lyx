@@ -1514,7 +1514,11 @@ X\left(t\right)=\left(\frac{k_{on}\cdot\alpha_{active}+k_{off}\cdot\alpha_{incat
 \begin_inset Formula $g7$
 \end_inset
 
- קיבל קבועי ביטוי שונים בצורה משמעותית, אך גם הם לא הביאו לשינוי במדד ה
+ קיבל קבועי ביטוי שונים בצורה משמעותית )
+\begin_inset Formula $\alpha_{active}=5.27\frac{\#}{min},\alpha_{inactive}=0.08\frac{\#}{min}$
+\end_inset
+
+(, אך גם הם לא הביאו לשינוי במדד ה
 \family roman
 \series medium
 \shape up
@@ -1553,6 +1557,78 @@ NRMSE
 
  נגרם שינוי קל )מאוד( במודל, עבור כל האחרים מדובר בגרפים זהים למעט סטיות
  זעירות.
+\end_layout
+
+\begin_layout Standard
+יש לציין שעבור הגן 
+\begin_inset Formula $g7$
+\end_inset
+
+ המדידה הראשונה גבוהה בצורה משמעותית מהשאר והיא אחראית ל
+\begin_inset Quotes erd
+\end_inset
+
+מירב
+\begin_inset Quotes erd
+\end_inset
+
+ השונות.
+ עם זאת, נראה שאינה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+outlier
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכן היא מופיעה בערכים דומים עבור שלוש המדידות.
+ ייתכן שביטוי הגן מתאים למודל אחר מהשניים שהוצעו לעיל.
 \begin_inset Newpage newpage
 \end_inset
 
