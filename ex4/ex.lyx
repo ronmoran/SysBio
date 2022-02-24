@@ -298,12 +298,1210 @@ status open
 )ב(
 \end_layout
 
+\begin_layout Standard
+שערכנו את קצב הייצור לכל אחד מהמקרים בקוד המצורף וקיבלנו מספר אומדים לכל
+ מקרה.
+ 
+\end_layout
+
+\begin_layout Standard
+בגרפים הבאים אנחנו מציגים את התפלגות אומדי קצב הייצור והפירוק שקיבלנו ב-
+\lang english
+boxplot
+\lang hebrew
+, בו הקו הכתום מסמל את החציון והירוק המקוקו את הממוצע.
+ בחרנו להציג את ה-
+\lang english
+NRMSE
+\lang hebrew
+, נרמול של שורש ה-
+\lang english
+MSE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לפי סטיית התקן )מוצג יותר בפירוט בשאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+(, מכיוון שה-
+\lang english
+MSE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של האומדים לקצב הפירוק יוצאים קטנים עד כדי זניחים )כי הערך עצמו קטן, המרחק
+ ממנו קטן יורת וריבוע של מספר קטן בהרבה מ-
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מקטין אותו עוד(.
+ בנוסף יש הבדל של מספר סדרי גודל בין הקצבים אותם אנו אומדים כך שהשוואה בין
+ ה-
+\lang english
+MSE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שלהם חסרת משמעות.
+ 
+\end_layout
+
+\begin_layout Standard
+המקרים הם:
+\end_layout
+
+\begin_layout Itemize
+לפי כל ניסוי בנפרד בו מודדים כל חצי שעה )סה
+\begin_inset Quotes erd
+\end_inset
+
+כ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+(:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/SG30.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/SP30.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+לפי ממוצעים של שלשות של ניסויים בו מודדים כל חצי שעה )שלשות עוקבות, סה
+\begin_inset Quotes erd
+\end_inset
+
+כ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7
+\numeric off
+(:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/TG30.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/TP30.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 )ג(
 \end_layout
 
+\begin_layout Standard
+נביט בהבדלים בין האומדים )הממוצע של האומדים בכל אחד מהמקרים(:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+תאים בודדים )רעש פואסוני(
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+אוכלוסייה )רעש גאוסיאני(
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+סוג ניסוי
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ממוצע שלשות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+מדידות יחידות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ממוצע שלשות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+מדידות יחידות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+סוג מדידה
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.116$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.078$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.662$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.577$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+קצב ייצור
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0403$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0401$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0384$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0379$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+קצב פירוק
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+במקרה הזה ממוצעי האומדים לפי מדידות של האוכלוסייה יצאו מעט נמוכים מהערך
+ האמיתי, וממוצעי האומדים לפי מדידות של תאים בודדים יצאו מעט גבוהים מהערך
+ האמיתי.
+ בנוסף, ממוצע האומדים לפי מדידות יחידות יוצא מעט קרוב יותר לערך האמיתי מאשר
+ ממוצע האומדים שחושבו לפי ממוצעים של שלוש מדידות, שזו תוצאה קצת מפתיעה.
+ גם לפי מדד ה-
+\lang english
+NRMSE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ ישנה עדיפות לאומדים המבוססים על מדידות יחידות, וגם עדיפות קטנה לאומדים
+ שנבנו לפי מדידות של האוכלוסייה.
+ עם זאת, יוצא שממוצעי האומדים לפי מדידות של תאים בודדים קרוב יותר לערכים
+ האמיתיים מאשר ממוצעי האומדים לפי מדידות של האוכלוסייה.
+ בנוסף, באופן לא מפתיע השונות של האומדים שמקורם בממוצע של שלוש מדידות קטן
+ יותר.
+ 
+\end_layout
+
+\begin_layout Standard
+נציין שההבדלים הם קטנים ונוטים להשתנות בין הרצה להרצה אז קשה להסיק מסקנות
+ חד משמעיות מהתוצאות.
+\end_layout
+
 \begin_layout Subsubsection
 )ד(
+\end_layout
+
+\begin_layout Standard
+כעת נוסיף את המקרה בו משערכים לפי כל ניסוי בנפרד בו מודדים כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דקות )סה
+\begin_inset Quotes erd
+\end_inset
+
+כ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+(:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/SG10.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plots/SP10.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+תאים בודדים
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+אוכלוסייה
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+סוג ניסוי
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+יחידות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דק'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+שלשות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+30
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דק'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+יחידות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דק'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+שלשות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+30
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דק'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+סוג מדידה
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.086$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.116$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.940$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.662$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+קצב ייצור
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.04007$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0403$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.04002$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0384$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+קצב פירוק
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בכל המקרים פרט לקצב פירוק בתאים בודדים האומדים שמקורם בממוצע של אומדים לפי
+ מדידות יחידות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דקות קרובים לערכים האמיתיים, וכך גם במדד ה-
+\lang english
+RMSE
+\lang hebrew
+.
+ גם פה ההבדלים לא גדולים ומשתנים מהרצה להרצה.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -969,7 +2167,7 @@ NRMSE
 
 \begin_inset Formula 
 \begin{gather*}
-NRMSE\left(Y,\hat{Y}\right)=\frac{\sqrt{\sum_{i=1}^{n}\left(y_{i}-\widehat{y_{i}}\right)^{2}}}{\widehat{\sigma_{y}}},\\
+NRMSE\left(Y,\hat{Y}\right)=\frac{\sqrt{\dfrac{1}{n}\sum_{i=1}^{n}\left(y_{i}-\widehat{y_{i}}\right)^{2}}}{\widehat{\sigma_{y}}},\\
 \widehat{\sigma_{y}}=\sqrt{\frac{\sum_{i=1}^{n}\left(y_{i}-\bar{Y}\right)^{2}}{n-1}}
 \end{gather*}
 
@@ -1027,6 +2225,10 @@ NRMSE\left(Y,\hat{Y}\right)=\frac{\sqrt{\sum_{i=1}^{n}\left(y_{i}-\widehat{y_{i}
 \color inherit
 \lang english
 RMSE
+\lang hebrew
+, שורש ה-
+\lang english
+MSE
 \lang hebrew
 , מדד מוכר להערכת שגיאה, אך כדי להשוות בין הגנים צריך להתייחס לשונות בביטוי
  של כל אחד מהם.
@@ -1741,6 +2943,10 @@ PSSM:
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \begin{bmatrix}A & C & G & T\\
@@ -1764,9 +2970,18 @@ PSSM:
 \end_layout
 
 \end_inset
+
+
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -1780,6 +2995,11 @@ PSSM:
 0.000000 & 1.000000 & 0.000000 & 0.000000
 \end{bmatrix}
 \]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1974,7 +3194,90 @@ SMAD2
 \noun default
 \color inherit
 מהפרומוטורים לגנים ברשימה ישנה נוכחות של רצפי ההכרה של שני הפרומוטורים.
- כל אחד מהם יוצר עמם
+ כל אחד מהם יוצר עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+FOXH1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\lang english
+SMAD2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מוטיב של
 \family roman
 \series medium
 \shape up
