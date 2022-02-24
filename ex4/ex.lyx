@@ -3111,7 +3111,7 @@ Nucleotide frequency logo:
 \end_layout
 
 \begin_layout Standard
-רשימת הגנים שקיים בהם מוטיב הקישור של
+רשימות הגנים שקיים בהם מוטיב הקישור של
 \family roman
 \series medium
 \shape up
@@ -3165,7 +3165,7 @@ SMAD2, FOXH1
 \uwave default
 \noun default
 \color inherit
-נמצאת בקבצים המצורפים:
+נמצאות בהתאמה בקבצים המצורפים:
 \family roman
 \series medium
 \shape up
@@ -3192,11 +3192,7 @@ SMAD2, FOXH1
 \noun default
 \color inherit
 \lang english
-motifs
-\backslash
-fimo_FOXH1.tsv, motifs
-\backslash
-fimo_FOXH1.tsv
+fimo_SMAD2.tsv, fimo_FOXH1.tsv
 \lang hebrew
 .
 \end_layout
