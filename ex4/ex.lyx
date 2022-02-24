@@ -2944,7 +2944,7 @@ PSSM:
 
 \begin_layout Plain Layout
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -2981,7 +2981,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -3110,6 +3110,192 @@ Nucleotide frequency logo:
 )ב(
 \end_layout
 
+\begin_layout Standard
+רשימת הגנים שקיים בהם מוטיב הקישור של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+SMAD2, FOXH1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נמצאת בקבצים המצורפים:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+motifs
+\backslash
+fimo_FOXH1.tsv, motifs
+\backslash
+fimo_FOXH1.tsv
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Standard
+נמצאים בהם מוטיבים הן על הגדיל הנתון והן על המשלים.
+ נחוץ מידע על פעילות הגנים כדי לדעת את מידת השפעתם בציס/בטרנס.
+\end_layout
+
+\begin_layout Standard
+נמצאו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+32
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+גנים שהפרומוטורים שלהם מכילים הן רצפי בקרה ל
+\lang english
+SMAD2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ והן ל 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+FOXH1
+\lang hebrew
+.
+\end_layout
+
 \begin_layout Subsubsection
 )ג(
 \end_layout
@@ -3164,7 +3350,7 @@ SMAD2
 \end_layout
 
 \begin_layout Standard
-בנוסף, ב-
+בנוסף, כאמור לעיל, ב-
 \numeric on
 32
 \family roman
