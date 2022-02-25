@@ -372,7 +372,7 @@ MSE
 \color inherit
 2
 \numeric off
-(, מכיוון שה-
+(, מכיוון שערך ה-
 \lang english
 MSE
 \family roman
@@ -401,8 +401,8 @@ MSE
 \uwave default
 \noun default
 \color inherit
-של האומדים לקצב הפירוק יוצאים קטנים עד כדי זניחים )כי הערך עצמו קטן, המרחק
- ממנו קטן יורת וריבוע של מספר קטן בהרבה מ-
+של האומדים לקצב הפירוק יוצאים קטנים עד כדי זניחים )כי הערך עצמו כבר קטן,
+ לכן גם המרחק של כל אמדן ממנו קטן וריבוע של מספר קטן בהרבה מ-
 \numeric on
 1
 \family roman
@@ -471,7 +471,7 @@ MSE
 \end_layout
 
 \begin_layout Itemize
-לפי כל ניסוי בנפרד בו מודדים כל חצי שעה )סה
+שערוך אמדן לפי כל ניסוי בנפרד בו מודדים כל חצי שעה )סה
 \begin_inset Quotes erd
 \end_inset
 
@@ -530,7 +530,8 @@ MSE
 \end_layout
 
 \begin_layout Itemize
-לפי ממוצעים של שלשות של ניסויים בו מודדים כל חצי שעה )שלשות עוקבות, סה
+שערוך אמדן לפי ממוצעים של שלשות של ניסויים בו מודדים כל חצי שעה )שלשות עוקבות,
+ סה
 \begin_inset Quotes erd
 \end_inset
 
@@ -1440,8 +1441,7 @@ NRMSE
 \end_layout
 
 \begin_layout Standard
-בכל המקרים פרט לקצב פירוק בתאים בודדים האומדים שמקורם בממוצע של אומדים לפי
- מדידות יחידות כל
+בכל המקרים האומדים שמקורם בממוצע של אומדים לפי מדידות יחידות כל
 \family roman
 \series medium
 \shape up
@@ -1495,11 +1495,173 @@ NRMSE
 \uwave default
 \noun default
 \color inherit
-דקות קרובים לערכים האמיתיים, וכך גם במדד ה-
+דקות קרובים לערכים האמיתיים, וגם במדד ה-
 \lang english
 RMSE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \lang hebrew
-.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יש עדיפות לאומדים ממדידות יחידות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דקות )פרט לקצב ייצור בתאים בודדים, שם מדד ה-
+\lang english
+NRMSE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מעט טוב יותר במקרה של שלשות כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+30
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דק(.
  גם פה ההבדלים לא גדולים ומשתנים מהרצה להרצה.
  
 \end_layout
@@ -2689,10 +2851,7 @@ X\left(t\right)=\left(\frac{k_{on}\cdot\alpha_{active}+k_{off}\cdot\alpha_{incat
 \end_inset
 
 , הרי קצב הייצור של פרומוטור פעיל גבוה בהרבה מזה של פרומוטור שאינו פעיל.
-\end_layout
-
-\begin_layout Standard
-נזכור שמדובר ב
+ נזכור שמדובר ב
 \begin_inset Quotes erd
 \end_inset
 
@@ -2885,15 +3044,19 @@ outlier
 \end_layout
 
 \begin_layout Standard
+הסתבורויות לאותיות בכל עמדה במוטיב:
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="2" columns="3">
 <features tabularvalignment="middle">
-<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2928,7 +3091,7 @@ SMAD2
 </cell>
 </row>
 <row>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2943,13 +3106,7 @@ PSSM:
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\begin{bmatrix}A & C & G & T\\
+\begin_inset Formula $\begin{bmatrix}A & C & G & T\\
 0.108333 & 0.375000 & 0.183333 & 0.333333\\
 0.158333 & 0.383333 & 0.191667 & 0.266667\\
 0.083333 & 0.358333 & 0.425000 & 0.133333\\
@@ -2961,14 +3118,7 @@ status collapsed
 1.000000 & 0.000000 & 0.000000 & 0.000000\\
 0.000000 & 1.000000 & 0.000000 & 0.000000\\
 0.883333 & 0.000000 & 0.000000 & 0.116667
-\end{bmatrix}
-\]
-
-\end_inset
-
-
-\end_layout
-
+\end{bmatrix}$
 \end_inset
 
 
@@ -2980,30 +3130,71 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\begin{bmatrix}A & C & G & T\\
+\begin_inset Formula $\begin{bmatrix}A & C & G & T\\
 0.008333 & 0.933333 & 0.041667 & 0.016667\\
 0.000000 & 0.966667 & 0.025000 & 0.008333\\
 0.908333 & 0.058333 & 0.033333 & 0.000000\\
 0.000000 & 0.000000 & 1.000000 & 0.000000\\
 1.000000 & 0.000000 & 0.000000 & 0.000000\\
 0.000000 & 1.000000 & 0.000000 & 0.000000
-\end{bmatrix}
-\]
-
+\end{bmatrix}$
 \end_inset
 
 
 \end_layout
 
 \end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+והלוגואים:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+FOXH1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+SMAD2
 \end_layout
 
 \end_inset
@@ -3195,10 +3386,7 @@ SMAD2, FOXH1
 fimo_SMAD2.tsv, fimo_FOXH1.tsv
 \lang hebrew
 .
-\end_layout
-
-\begin_layout Standard
-נמצאים בהם מוטיבים הן על הגדיל הנתון והן על המשלים.
+ נמצאים בהם מוטיבים הן על הגדיל הנתון והן על המשלים.
  נחוץ מידע על פעילות הגנים כדי לדעת את מידת השפעתם בציס/בטרנס.
 \end_layout
 
@@ -3257,7 +3445,7 @@ fimo_SMAD2.tsv, fimo_FOXH1.tsv
 \uwave default
 \noun default
 \color inherit
-גנים שהפרומוטורים שלהם מכילים הן רצפי בקרה ל
+גנים שהפרומוטורים שלהם מכילים הן רצפי בקרה ל-
 \lang english
 SMAD2
 \family roman
@@ -3273,7 +3461,7 @@ SMAD2
 \noun off
 \color none
 \lang hebrew
- והן ל 
+ והן ל-
 \family default
 \series default
 \shape default
@@ -3309,7 +3497,71 @@ FOXH1
 \end_layout
 
 \begin_layout Standard
-ניתן לזהות מוטיב של אוטורגולציה שלילית ב-
+לפי רצפי ההכרה בפרמוטורים של הגנים אפשר לנסות להסיק אילו מהם מושפעים על
+ ידי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+FOXH1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\lang english
+SMAD2
+\lang hebrew
+.
+ 
+\end_layout
+
+\begin_layout Standard
+כך ניתן לזהות מוטיב של אוטורגולציה שלילית ב-
 \lang english
 FOXH1
 \family roman

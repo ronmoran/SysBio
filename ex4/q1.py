@@ -5,6 +5,7 @@ from scipy import optimize
 
 SAVE = False
 
+
 def question1():
     experiment_time = 180  # minutes
     decay_rate = 0.04  # 1/min
@@ -120,13 +121,6 @@ def nrmse_title_helper(estimators: pd.DataFrame, real_val: float):
 
 def nrmse(x: pd.DataFrame, val: float):
     return np.sqrt(((np.array(x) - val) ** 2).mean()) / x.std()
-
-
-# todo - delete
-def plot_single_param_estimation(estimators: pd.DataFrame, real_val: float, param_name: str, plot_kind: str):
-    estimators.plot(kind=plot_kind, title=f'{param_name} Fit From Single Repeats,\n'
-                                          f'Real Value Used: {real_val}, NRMSE: {nrmse(estimators, real_val):.2f}')
-    plt.show()
 
 
 if __name__ == '__main__':
